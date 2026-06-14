@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Android / Gradle build outputs
+.gradle/
+build/
+local.properties
+captures/
+*.iml
+
+# IDE
+.idea/
+*.swp
+*~
+
+# Compiled artifacts
+*.apk
+*.aar
+
+# Keystores / signing — never commit
+*.jks
+*.keystore
+
+# MediaPipe model bundles — separately licensed by Google; contributors
+# download these themselves from the URLs documented in
+# service-motion/src/main/assets/README.md
+*.task
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# mkdocs output
+site/
+/site/
+
+# Python venv for building docs locally
+.venv/
+.venv-docs/

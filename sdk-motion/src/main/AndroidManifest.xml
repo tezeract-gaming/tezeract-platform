@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 11+ package visibility: every app that depends on this SDK
+         needs to be able to see the Motion Engine service in order to bind
+         to it. Declared here so the manifest merger propagates it to every
+         consumer automatically. -->
+    <queries>
+        <package android:name="com.tezeract.motion" />
+        <intent>
+            <action android:name="com.tezeract.motion.BIND" />
+        </intent>
+        <!-- The launcher (and any future game-discovering app) needs to be
+             able to enumerate all Tezeract-compatible games via their
+             MOTION_GAME intent filter. Without this query, Android 11+
+             package visibility hides them and AppRepository.getInstalledApps
+             returns an empty list. -->
+        <intent>
+            <action android:name="com.tezeract.intent.action.MOTION_GAME" />
+        </intent>
+    </queries>
+
+</manifest>

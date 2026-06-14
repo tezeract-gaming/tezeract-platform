@@ -1,0 +1,64 @@
+site_name: TezeractOS Developer Docs
+site_description: Build and ship motion-controlled games for TezeractOS.
+site_url: https://docs.tezeract.dev
+repo_url: https://github.com/tezeract/tezeract-os
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Quick Start: quickstart.md
+  - SDK Reference: sdk-reference.md
+  - Game Manifest: manifest.md
+  - Building & Packaging: packaging.md
+  - Submitting to the Store: submitting.md
+  - Pricing & Stripe: stripe.md
+  - Best Practices: best-practices.md
+  - Examples: examples.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details

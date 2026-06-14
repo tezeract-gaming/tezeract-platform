@@ -1,0 +1,26 @@
+tezeract-platform
+Copyright 2026 Tezeract, Inc.
+
+This product includes software developed by Tezeract, Inc.
+
+Per-module licenses:
+
+  sdk-motion/        Apache-2.0  (see ./LICENSE)
+  service-motion/    Apache-2.0  (see ./LICENSE)
+  app-flappy/        MIT         (see ./app-flappy/LICENSE)
+  app-sample-game/   MIT         (see ./app-sample-game/LICENSE)
+  app-shadow-boxing/ MIT         (see ./app-shadow-boxing/LICENSE)
+  app-input-tester/  MIT         (see ./app-input-tester/LICENSE)
+  docs/              CC-BY-4.0   (see ./docs/LICENSE)
+
+Tezeract is a trademark of Tezeract, Inc. This License does not grant
+permission to use the Tezeract name, brand, or logos. To distribute a
+fork using a different name is welcome and consistent with the
+licenses above.
+
+Third-party components (linked at build time, not redistributed in
+source):
+  - MediaPipe Tasks (Google LLC, Apache-2.0) — see service-motion
+  - CameraX (Google LLC / Android Open Source Project, Apache-2.0)
+  - Jetpack Compose (Google LLC / AOSP, Apache-2.0)
+  - Kotlin standard library + coroutines (JetBrains, Apache-2.0)

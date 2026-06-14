@@ -1,0 +1,87 @@
+[versions]
+agp = "8.2.2"
+kotlin = "1.9.22"
+coroutines = "1.7.3"
+composeBom = "2024.02.00"
+composeCompiler = "1.5.8"
+tvFoundation = "1.0.0-alpha10"
+tvMaterial = "1.0.0-alpha10"
+coil = "2.5.0"
+mediapipe = "0.10.9"
+retrofit = "2.9.0"
+okhttp = "4.12.0"
+room = "2.6.1"
+lifecycle = "2.7.0"
+navigation = "2.7.6"
+ausbc = "3.3.5"
+supabase = "2.1.3"
+ktor = "2.3.7"
+cameraX = "1.3.1"
+zxing = "3.5.3"
+
+[libraries]
+# Kotlin & Coroutines
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+
+# Compose for TV
+tv-foundation = { module = "androidx.tv:tv-foundation", version.ref = "tvFoundation" }
+tv-material = { module = "androidx.tv:tv-material", version.ref = "tvMaterial" }
+
+# AndroidX
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+core-ktx = { module = "androidx.core:core-ktx", version = "1.12.0" }
+appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }
+activity-compose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# Image loading
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version = "0.32.0" }
+
+# MediaPipe
+mediapipe-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "mediapipe" }
+
+# CameraX — talks to Android's standard camera HAL, including external USB cameras
+# via camera-provider-2-4-ext on the Orange Pi. See ADR-007.
+camerax-core = { module = "androidx.camera:camera-core", version.ref = "cameraX" }
+camerax-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraX" }
+camerax-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraX" }
+lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle" }
+
+# Network
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+
+# Supabase
+supabase-postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "supabase" }
+supabase-storage = { module = "io.github.jan-tennert.supabase:storage-kt", version.ref = "supabase" }
+supabase-auth = { module = "io.github.jan-tennert.supabase:gotrue-kt", version.ref = "supabase" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+
+# QR generation — pure-Java, ~280KB, used in the launcher's paid-app
+# checkout flow (renders a QR pointing at tezeract.com/buy/<appId>).
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
